@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXTextField?>
+<?import com.jfoenix.validation.RequiredFieldValidator?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="614.0" prefWidth="1009.0" styleClass="ancho" stylesheets="@../../assests/style/css.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.controller.CommandeController.CommandeController">
+   <children>
+      <VBox layoutX="4.0" layoutY="140.0" prefHeight="614.0" prefWidth="963.0" AnchorPane.bottomAnchor="9.0" AnchorPane.leftAnchor="4.0" AnchorPane.rightAnchor="4.0" AnchorPane.topAnchor="140.0">
+         <children>
+            <GridPane prefHeight="427.0" prefWidth="930.0">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints maxHeight="194.0" minHeight="10.0" prefHeight="40.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="368.0" minHeight="10.0" prefHeight="315.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <TableView fx:id="tab_Commandes" prefHeight="351.0" prefWidth="922.0" GridPane.rowIndex="1">
+                    <columns>
+                      <TableColumn fx:id="id_commande" prefWidth="111.0" text="IDCommande" />
+                      <TableColumn fx:id="client_col" prefWidth="120.0" text="Client Name" />
+                        <TableColumn fx:id="produit_col" prefWidth="120.0" text="Produit" />
+                        <TableColumn fx:id="prix_col" prefWidth="95.0" text="Prix" />
+                        <TableColumn fx:id="adress_col" prefWidth="114.0" text="Adresse" />
+                        <TableColumn fx:id="quantite_col" prefWidth="118.0" text="Quantité" />
+                        <TableColumn fx:id="status_col" prefWidth="119.0" text="Status" />
+                        <TableColumn fx:id="total_col" prefWidth="66.0" text="Total En DH" />
+                        <TableColumn fx:id="Date_col" prefWidth="225.0" text="Date" />
+                    </columns>
+                  </TableView>
+                  <HBox alignment="CENTER" prefHeight="44.0" prefWidth="833.0" spacing="10.0">
+                     <children>
+                         <JFXTextField fx:id="search" prefHeight="25.0" prefWidth="247.0" promptText="Search">
+                             <validators>
+                                 <RequiredFieldValidator message="Veuillez Entrer Un Critère A Rechercher">
+                                     <!--               <FontIcon iconLiteral="fas-exclamation-triangle"/>-->
+                                 </RequiredFieldValidator>
+                             </validators>
+                         </JFXTextField>
+                        <Button fx:id="searchB" mnemonicParsing="false" onAction="#searchB" prefHeight="32.0" prefWidth="32.0">
+                           <graphic>
+                              <FontAwesomeIconView fill="WHITE" glyphName="SEARCH" size="14.0" wrappingWidth="17.0" />
+                           </graphic>
+                        </Button>
+                        <Button mnemonicParsing="false" onAction="#Refresh" prefHeight="32.0" prefWidth="32.0">
+                           <graphic>
+                              <FontAwesomeIconView fill="WHITE" glyphName="REFRESH" />
+                           </graphic>
+                        </Button>
+                        <Button fx:id="newcommande" mnemonicParsing="false" onAction="#newcommandes" prefHeight="32.0" prefWidth="32.0" textFill="WHITE">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                           <graphic>
+                              <FontAwesomeIconView fill="WHITE" glyphName="PLUS" />
+                           </graphic>
+
+                        </Button>
+                        <Button fx:id="modicomm" mnemonicParsing="false" onAction="#modicomm" prefHeight="32.0" prefWidth="32.0" textFill="WHITE">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                           <graphic>
+                              <ImageView fitHeight="18.0" fitWidth="18.0">
+                                 <image>
+                                    <Image url="@../../assests/style/images/icons8-modifier-24.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                        <Button fx:id="supcom" mnemonicParsing="false" onAction="#supcom" prefHeight="32.0" prefWidth="32.0" textFill="WHITE">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                           <graphic>
+                              <ImageView fitHeight="25.0" fitWidth="26.0">
+                                 <image>
+                                    <Image url="@../../assests/style/images/icons8-supprimer-pour-toujours-100.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                        <Button fx:id="export" mnemonicParsing="false" onAction="#exportcsv" prefHeight="32.0" prefWidth="102.0" text="Exsport csv" textFill="#fffbfb" />
+                     </children>
+                  </HBox>
+               </children>
+            </GridPane>
+            <Label fx:id="Total" prefHeight="17.0" prefWidth="238.0" text="Total Commande">
+               <VBox.margin>
+                  <Insets left="720.0" top="6.0" />
+               </VBox.margin>
+            </Label>
+         </children>
+      </VBox>
+      <Pane prefHeight="116.0" prefWidth="832.0" style="-fx-background-color: #5471d2;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+         <children>
+            <Text layoutX="326.0" layoutY="77.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Les Commandes">
+               <fill>
+                  <LinearGradient endX="1.0" endY="1.0" startX="0.42857142857142855" startY="1.0">
+                     <stops>
+                        <Stop color="#5d5c5c" />
+                        <Stop color="#c7e3f2" offset="1.0" />
+                     </stops>
+                  </LinearGradient>
+               </fill>
+               <font>
+                  <Font name="System Bold" size="47.0" />
+               </font>
+            </Text>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

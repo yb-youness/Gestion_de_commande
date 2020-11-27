@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import com.jfoenix.validation.RegexValidator?>
+<?import com.jfoenix.validation.RequiredFieldValidator?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="576.0" prefWidth="789.0" styleClass="ancho" stylesheets="@../../assests/style/css.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.controller.CommandeController.AjouterCommandeController">
+   <children>
+      <Pane prefHeight="592.0" prefWidth="813.0">
+         <children>
+            <JFXTextField fx:id="quantity" labelFloat="true" layoutX="209.0" layoutY="245.0" prefHeight="25.0" prefWidth="308.0" promptText="Quantite">
+               <validators>
+                  <RequiredFieldValidator message="Champ Quanity Obligatoire">
+                     <!--                  <FontIcon iconLiteral="fas-exclamation-triangle"/>-->
+                  </RequiredFieldValidator>
+                  <RegexValidator message="Veuillez Entrer Une Quantity Valid " regexPattern="^[1-9]\\d*$" />
+               </validators>
+            </JFXTextField>
+            <JFXButton fx:id="add" buttonType="RAISED" layoutX="255.0" layoutY="500.0" onAction="#AddCommand" prefHeight="33.0" prefWidth="115.0" stylesheets="@../../assests/style/css.css" text="Enregistrer" textFill="#0c8318">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </JFXButton>
+            <JFXButton fx:id="Annuler" buttonType="RAISED" layoutX="391.0" layoutY="500.0" onAction="#vider" prefHeight="33.0" prefWidth="115.0" stylesheets="@../../assests/style/css.css" text="Annuler" textFill="#f70000bb">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </JFXButton>
+            <JFXButton fx:id="retour" buttonType="RAISED" layoutX="24.0" layoutY="38.0" onAction="#Retour" prefHeight="31.0" prefWidth="115.0" stylesheets="@../../assests/style/css.css" text="Retour" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </JFXButton>
+            <JFXComboBox fx:id="status" labelFloat="true" layoutX="209.0" layoutY="373.0" prefHeight="25.0" prefWidth="308.0" promptText="Status">
+               <validators>
+               <RequiredFieldValidator message="Champ Statu Obligatoire">
+                  <!--                  <FontIcon iconLiteral="fas-exclamation-triangle"/>-->
+               </RequiredFieldValidator>
+               </validators>
+            </JFXComboBox>
+            <JFXDatePicker fx:id="datech" layoutX="277.0" layoutY="439.0" promptText="Date">
+               <validators>
+                  <RequiredFieldValidator message="Champ Date Obligatoire">
+                     <!--                  <FontIcon iconLiteral="fas-exclamation-triangle"/>-->
+                  </RequiredFieldValidator>
+               </validators>
+            </JFXDatePicker>
+            <JFXTextField fx:id="adresse" labelFloat="true" layoutX="209.0" layoutY="310.0" prefHeight="25.0" prefWidth="308.0" promptText="Adresse">
+               <validators>
+                  <RequiredFieldValidator message="Champ Adresse Obligatoire">
+                     <!--                  <FontIcon iconLiteral="fas-exclamation-triangle"/>-->
+                  </RequiredFieldValidator>
+               </validators>
+            </JFXTextField>
+            <JFXComboBox fx:id="allClient" layoutX="255.0" layoutY="107.0" prefHeight="31.0" prefWidth="189.0" promptText="Client">
+               <validators>
+                  <RequiredFieldValidator message="Champ Client Obligatoire">
+                     <!--                  <FontIcon iconLiteral="fas-exclamation-triangle"/>-->
+                  </RequiredFieldValidator>
+               </validators>
+            </JFXComboBox>
+            <JFXComboBox fx:id="allproduit" layoutX="255.0" layoutY="181.0" prefHeight="13.0" prefWidth="189.0" promptText="Produit">
+               <validators>
+               <RequiredFieldValidator message="Champ Produit Obligatoire">
+                  <!--                  <FontIcon iconLiteral="fas-exclamation-triangle"/>-->
+               </RequiredFieldValidator>
+            </validators>
+            </JFXComboBox>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

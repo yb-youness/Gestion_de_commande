@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXRadioButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import com.jfoenix.validation.RegexValidator?>
+<?import com.jfoenix.validation.RequiredFieldValidator?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="576.0" prefWidth="757.0" styleClass="ancho" stylesheets="@../../assests/style/css.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.controller.ClientController.AjouterClientController">
+   <children>
+      <Pane prefHeight="592.0" prefWidth="813.0">
+         <children>
+            <JFXTextField fx:id="num_tel" labelFloat="true" layoutX="208.0" layoutY="156.0" prefHeight="25.0" prefWidth="308.0" promptText="NumTel">
+               <validators>
+                  <RequiredFieldValidator message="Veuillez Entrer Un Numero De tel">
+                     <!--                  <FontIcon iconLiteral="fas-exclamation-triangle"/>-!-->
+                  </RequiredFieldValidator>
+<!--                  <IntegerValidator layoutX="235.0" layoutY="282.0"  message="Num de Tel doit etre Numerique "/>-->
+                  <RegexValidator message="Veuillez Entrer Un num Tel Valide" regexPattern="(\+212|0)([ \-_/]*)(\d[ \-_/]*){9}" />
+               </validators>
+            </JFXTextField>
+
+            <JFXTextField fx:id="prenom" labelFloat="true" layoutX="208.0" layoutY="296.0" prefHeight="25.0" prefWidth="308.0" promptText="Prenom">
+               <validators>
+                  <RequiredFieldValidator message="Veuillez Entrer Un Prenom">
+
+                  </RequiredFieldValidator>
+
+
+               </validators>
+            </JFXTextField>
+            <JFXButton fx:id="add" buttonType="RAISED" layoutX="235.0" layoutY="500.0" onAction="#AddClient" prefHeight="33.0" prefWidth="106.0" stylesheets="@../../assests/style/css.css" text="Enregistrer" textFill="#0c8318">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </JFXButton>
+            <JFXButton fx:id="Annuler" buttonType="RAISED" layoutX="362.0" layoutY="500.0" onAction="#Vider" prefHeight="33.0" prefWidth="106.0" stylesheets="@../../assests/style/css.css" text="Annuler" textFill="#f70000bb">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </JFXButton>
+            <JFXButton fx:id="retour" buttonType="RAISED" layoutX="24.0" layoutY="38.0" onAction="#Retour" prefHeight="31.0" prefWidth="115.0" stylesheets="@../../assests/style/css.css" text="Retour" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </JFXButton>
+            <JFXTextField fx:id="email" labelFloat="true" layoutX="208.0" layoutY="364.0" prefHeight="25.0" prefWidth="308.0" promptText="Email">
+               <validators>
+                  <RequiredFieldValidator message="Veuillez Entrer Un Email">
+                     <!--                  <FontIcon iconLiteral="fas-exclamation-triangle"/>-->
+                  </RequiredFieldValidator>
+                  <RegexValidator message="Veuillez Entrer Un Email Valide" regexPattern="(^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$)" />
+               </validators>
+            </JFXTextField>
+
+            <JFXTextField fx:id="nom" labelFloat="true" layoutX="208.0" layoutY="231.0" prefHeight="25.0" prefWidth="308.0" promptText="Nom">
+               <validators>
+                  <RequiredFieldValidator message="Veuillez Entrer Un Nom">
+                  </RequiredFieldValidator>
+               </validators>
+            </JFXTextField>
+            <JFXRadioButton fx:id="homme" layoutX="208.0" layoutY="428.0" text="Homme">
+               <toggleGroup>
+                  <ToggleGroup fx:id="sexe" />
+               </toggleGroup></JFXRadioButton>
+            <JFXRadioButton fx:id="femme" layoutX="308.0" layoutY="428.0" text="Femme" toggleGroup="$sexe" />
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

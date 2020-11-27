@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="614.0" prefWidth="1009.0" styleClass="ancho" stylesheets="@../../assests/style/css.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.controller.MasterpageController">
+   <children>
+      <Pane prefHeight="116.0" prefWidth="832.0" style="-fx-background-color: #5471d2;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+         <children>
+            <Text layoutX="372.0" layoutY="77.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Information">
+               <fill>
+                  <LinearGradient endX="1.0" endY="1.0" startX="0.42857142857142855" startY="1.0">
+                     <stops>
+                        <Stop color="#5d5c5c" />
+                        <Stop color="#c7e3f2" offset="1.0" />
+                     </stops>
+                  </LinearGradient>
+               </fill>
+               <font>
+                  <Font name="System Bold" size="47.0" />
+               </font>
+            </Text>
+         </children>
+      </Pane>
+      <Text layoutX="274.0" layoutY="205.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Gestion des Commandes V1.0" wrappingWidth="355.13671875">
+         <font>
+            <Font name="Bell MT Bold" size="17.0" />
+         </font>
+      </Text>
+      <Text layoutX="274.0" layoutY="228.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Developpé par Java 8 anneé 2020" wrappingWidth="355.13671875">
+         <font>
+            <Font name="Bell MT Bold" size="17.0" />
+         </font>
+      </Text>
+      <Text fill="#2c12db" layoutX="274.0" layoutY="258.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Développeurs :" wrappingWidth="355.13671875">
+         <font>
+            <Font name="Bell MT Bold" size="17.0" />
+         </font>
+      </Text>
+      <Text layoutX="274.0" layoutY="317.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Bahi BenYouness" wrappingWidth="355.13671875">
+         <font>
+            <Font name="Bell MT Bold" size="17.0" />
+         </font>
+      </Text>
+      <Text fill="#2c12db" layoutX="274.0" layoutY="422.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Technologies utulisé :" wrappingWidth="355.13671875">
+         <font>
+            <Font name="Bell MT Bold" size="17.0" />
+         </font>
+      </Text>
+      <Text layoutX="274.0" layoutY="460.0" strokeType="OUTSIDE" strokeWidth="0.0" text="JavaFx 2 ,FontAwesomeFx,Jfoenix,AnimateFx,SqliteJdbc,OpenCSV" wrappingWidth="515.13671875">
+         <font>
+            <Font name="Bell MT Bold" size="17.0" />
+         </font>
+      </Text>
+      <Text fill="#0040ff" layoutX="274.0" layoutY="510.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Le Moyen le plus rapide pour passer vos commandes" textAlignment="CENTER" wrappingWidth="449.13671875">
+         <font>
+            <Font name="Bell MT Bold" size="23.0" />
+         </font>
+      </Text>
+      <Text layoutX="274.0" layoutY="582.0" strokeType="OUTSIDE" strokeWidth="0.0" text="copyright © 2020-2020" textAlignment="CENTER" wrappingWidth="449.13671875">
+         <font>
+            <Font name="Arial Bold" size="12.0" />
+         </font>
+      </Text>
+   </children>
+</AnchorPane>

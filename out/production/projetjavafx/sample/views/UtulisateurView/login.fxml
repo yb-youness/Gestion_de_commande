@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<?import com.jfoenix.validation.RequiredFieldValidator?>
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="476.0" prefWidth="737.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.controller.UtulisateurController.LoginController">
+   <children>
+      <ImageView fitHeight="476.0" fitWidth="744.0" layoutX="-3.0" smooth="false">
+         <image>
+            <Image url="@../../assests/style/images/bglogin.jpg" />
+         </image>
+      </ImageView>
+      <JFXTextField fx:id="email" labelFloat="true" layoutX="386.0" layoutY="158.0" prefHeight="35.0" prefWidth="308.0" promptText="Utilisateur" unFocusColor="WHITE">
+            <validators>
+               <RequiredFieldValidator message="Champ Utilisateur Obligatoire">
+<!--                  <FontIcon iconLiteral="fas-exclamation-triangle"/>-->
+               </RequiredFieldValidator>
+            </validators>
+         <focusColor>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop color="#b9bfd3" />
+                  <Stop color="WHITE" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </focusColor>
+         <font>
+            <Font name="Arial" size="14.0" />
+         </font></JFXTextField>
+      <Button defaultButton="true" layoutX="481.0" layoutY="368.0" mnemonicParsing="false" onAction="#login" prefHeight="27.0" prefWidth="118.0" stylesheets="@../../assests/style/css.css" text="Login" textFill="WHITE" />
+      <Text fill="#f5f2f2" layoutX="478.0" layoutY="83.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Login" wrappingWidth="124.99999997019768">
+         <font>
+            <Font size="48.0" />
+         </font>
+      </Text>
+      <JFXPasswordField fx:id="pass" focusColor="#eeebeb" labelFloat="true" layoutX="386.0" layoutY="262.0" onAction="#login" prefHeight="35.0" prefWidth="308.0" promptText="Mot de passe" unFocusColor="WHITE">
+         <validators>
+            <RequiredFieldValidator message="Champ Pass Obilgatore">
+<!--               <FontIcon iconLiteral="fas-exclamation-triangle"/>-->
+            </RequiredFieldValidator>
+         </validators>
+
+         <font>
+            <Font name="Arial" size="14.0" />
+         </font></JFXPasswordField>
+   </children>
+</AnchorPane>

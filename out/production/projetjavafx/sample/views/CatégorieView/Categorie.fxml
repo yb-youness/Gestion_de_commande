@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import com.jfoenix.validation.RequiredFieldValidator?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="614.0" prefWidth="1009.0" styleClass="ancho" stylesheets="@../../assests/style/css.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.controller.CategorieController.CategorieController">
+   <children>
+      <JFXTextField fx:id="label" layoutX="452.0" layoutY="269.0" prefHeight="31.0" prefWidth="217.0" promptText="Saisir libele categorie">
+         <validators>
+            <RequiredFieldValidator message="Veuillez Saisir libele categorie">
+               <!--                  <FontIcon iconLiteral="fas-exclamation-triangle"/>-->
+            </RequiredFieldValidator>
+         </validators>
+      </JFXTextField>
+      <JFXButton fx:id="add" buttonType="RAISED" layoutX="452.0" layoutY="381.0" onAction="#Addcat" prefHeight="33.0" prefWidth="105.0" stylesheets="@../../assests/style/css.css" text="Enregistrer" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </JFXButton>
+      <Label layoutX="481.0" layoutY="218.0" prefHeight="21.0" prefWidth="47.0" text="Libele ">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <Pane prefHeight="116.0" prefWidth="1009.0" style="-fx-background-color: #5471d2;">
+         <children>
+            <Text layoutX="360.0" layoutY="77.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Les Categories">
+               <fill>
+                  <LinearGradient endX="1.0" endY="1.0" startX="0.42857142857142855" startY="1.0">
+                     <stops>
+                        <Stop color="#5d5c5c" />
+                        <Stop color="WHITE" offset="1.0" />
+                     </stops>
+                  </LinearGradient>
+               </fill>
+               <font>
+                  <Font name="System Bold" size="47.0" />
+               </font>
+            </Text>
+         </children>
+      </Pane>
+      <TableView fx:id="data" layoutX="52.0" layoutY="339.0" prefHeight="200.0" prefWidth="152.0">
+        <columns>
+          <TableColumn fx:id="id" prefWidth="75.0" text="Id" />
+          <TableColumn fx:id="lib" prefWidth="75.0" text="Libele" />
+        </columns>
+      </TableView>
+      <JFXTextField fx:id="rechrtex" layoutX="57.0" layoutY="272.0" prefHeight="25.0" prefWidth="169.0" promptText="Categorie a Recherche">
+         <validators>
+            <RequiredFieldValidator message="Veuillez Saisir libele categorie">
+               <!--                  <FontIcon iconLiteral="fas-exclamation-triangle"/>-->
+            </RequiredFieldValidator>
+         </validators>
+      </JFXTextField>
+      <Button fx:id="SearchButton" layoutX="223.0" layoutY="341.0" mnemonicParsing="false" onAction="#Search" prefHeight="32.0" prefWidth="32.0">
+         <graphic>
+            <FontAwesomeIconView fill="WHITE" glyphName="SEARCH" size="14.0" text="" wrappingWidth="12.0" />
+         </graphic>
+      </Button>
+      <Button fx:id="refre" layoutX="223.0" layoutY="393.0" mnemonicParsing="false" onAction="#Refresh" prefHeight="32.0" prefWidth="32.0">
+         <graphic>
+            <FontAwesomeIconView fill="WHITE" glyphName="REFRESH" />
+         </graphic>
+      </Button>
+      <Button fx:id="modicomm" layoutX="223.0" layoutY="448.0" mnemonicParsing="false" onAction="#modicomm" prefHeight="32.0" prefWidth="32.0" textFill="WHITE">
+         <font>
+            <Font size="15.0" />
+         </font>
+         <graphic>
+            <ImageView fitHeight="18.0" fitWidth="18.0">
+               <image>
+                  <Image url="@../../assests/style/images/icons8-modifier-24.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button fx:id="supcom" layoutX="219.0" layoutY="501.0" mnemonicParsing="false" onAction="#supcom" prefHeight="37.0" prefWidth="32.0" textFill="WHITE">
+         <font>
+            <Font size="15.0" />
+         </font>
+         <graphic>
+            <ImageView fitHeight="25.0" fitWidth="26.0">
+               <image>
+                  <Image url="@../../assests/style/images/icons8-supprimer-pour-toujours-100.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+   </children>
+</AnchorPane>

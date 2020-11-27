@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<?import com.jfoenix.validation.RequiredFieldValidator?>
+<?import com.jfoenix.validation.RegexValidator?>
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="576.0" prefWidth="783.0" styleClass="ancho" stylesheets="@../../assests/style/css.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.controller.UtulisateurController.AjouterUtulisateur">
+   <children>
+      <Pane layoutY="-14.0" prefHeight="592.0" prefWidth="813.0">
+         <children>
+            <JFXTextField fx:id="username" labelFloat="true" layoutX="208.0" layoutY="156.0" prefHeight="25.0" prefWidth="308.0" promptText="Username" >
+               <validators>
+                  <RequiredFieldValidator message="Veuillez Entrer Un Username">
+                     <!--                  <FontIcon iconLiteral="fas-exclamation-triangle"/>-->
+                  </RequiredFieldValidator>
+               </validators>
+            </JFXTextField>
+            <JFXTextField fx:id="email" labelFloat="true" layoutX="208.0" layoutY="246.0" prefHeight="25.0" prefWidth="308.0" promptText="Email" >
+               <validators>
+               <RequiredFieldValidator message="Veuillez Entrer Un Email">
+                  <!--                  <FontIcon iconLiteral="fas-exclamation-triangle"/>-->
+               </RequiredFieldValidator>
+               <RegexValidator message="Veuillez Entrer Un Email Valide" regexPattern="(^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$)"/>
+            </validators>
+            </JFXTextField>
+            <JFXButton buttonType="RAISED" layoutX="274.0" layoutY="500.0" onAction="#AddUSer" prefHeight="33.0" prefWidth="115.0" stylesheets="@../../assests/style/css.css" text="Enregistrer" textFill="#0c8318">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </JFXButton>
+            <JFXButton buttonType="RAISED" layoutX="408.0" layoutY="500.0" onAction="#vider" prefHeight="33.0" prefWidth="108.0" stylesheets="@../../assests/style/css.css" text="Annuler" textFill="#f70000bb">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </JFXButton>
+            <JFXButton buttonType="RAISED" layoutX="24.0" layoutY="38.0" onAction="#Retour" prefHeight="31.0" prefWidth="115.0" stylesheets="@../../assests/style/css.css" text="Retour" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </JFXButton>
+            <JFXPasswordField fx:id="pass" labelFloat="true" layoutX="208.0" layoutY="337.0" prefHeight="25.0" prefWidth="308.0" promptText="Password" >
+               <validators>
+                  <RequiredFieldValidator message="Veuillez Entrer Un Password">
+                     <!--                  <FontIcon iconLiteral="fas-exclamation-triangle"/>-->
+                  </RequiredFieldValidator>
+               </validators>
+            </JFXPasswordField >
+            <JFXPasswordField fx:id="ConfirmPass" labelFloat="true" layoutX="208.0" layoutY="416.0" prefHeight="25.0" prefWidth="308.0" promptText="Confimrm Password" >
+               <validators>
+                  <RequiredFieldValidator message="Veuillez Entrer Un Password Valid" >
+                     <!--                  <FontIcon iconLiteral="fas-exclamation-triangle"/>-->
+                  </RequiredFieldValidator>
+               </validators>
+            </JFXPasswordField >
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

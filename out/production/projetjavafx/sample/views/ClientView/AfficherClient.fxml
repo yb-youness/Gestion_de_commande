@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXTextField?>
+<?import com.jfoenix.validation.RequiredFieldValidator?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="614.0" prefWidth="1009.0" styleClass="ancho" stylesheets="@../../assests/style/css.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.controller.ClientController.AfficherClientController">
+   <children>
+      <VBox layoutX="72.0" layoutY="135.0" prefHeight="465.0" prefWidth="865.0" AnchorPane.bottomAnchor="14.0" AnchorPane.leftAnchor="72.0" AnchorPane.rightAnchor="72.0" AnchorPane.topAnchor="135.0">
+         <children>
+            <GridPane prefHeight="427.0" prefWidth="953.0">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints maxHeight="194.0" minHeight="10.0" prefHeight="40.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="368.0" minHeight="10.0" prefHeight="315.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <TableView fx:id="Display" prefHeight="351.0" prefWidth="955.0" GridPane.rowIndex="1">
+                    <columns>
+                      <TableColumn fx:id="ID_Client" prefWidth="111.0" text="ID_Client" />
+                      <TableColumn fx:id="Telephone" prefWidth="118.0" text="Telephone" />
+                        <TableColumn fx:id="Nom" prefWidth="121.0" text="Nom" />
+                        <TableColumn fx:id="Prenom" prefWidth="135.0" text="Prenom" />
+                        <TableColumn fx:id="Sexe" prefWidth="159.0" text="Sexe" />
+                        <TableColumn fx:id="Email" prefWidth="220.0" text="Email" />
+                    </columns>
+                  </TableView>
+                  <HBox alignment="CENTER" prefHeight="44.0" prefWidth="833.0" spacing="10.0">
+                     <children>
+                         <JFXTextField fx:id="searchFX" onAction="#search" prefHeight="25.0" prefWidth="219.0" promptText="search">
+                             <validators>
+                                 <RequiredFieldValidator message="Veuillez Entrer Un Critère A Rechercher">
+                                     <!-- <FontIcon iconLiteral="fas-exclamation-triangle"/>-->
+                                 </RequiredFieldValidator>
+                             </validators>
+                         </JFXTextField>
+                        <Button onAction="#search" prefHeight="32.0" prefWidth="32.0" textFill="WHITE">
+                            <graphic>
+                                <FontAwesomeIconView fill="WHITE" glyphName="SEARCH" size="14.0" wrappingWidth="17.0" />
+                            </graphic>
+                        </Button>
+
+
+                         <Button mnemonicParsing="false" onAction="#Refresh" prefHeight="32.0" prefWidth="32.0">
+                             <graphic>
+                                 <FontAwesomeIconView fill="WHITE" glyphName="REFRESH" />
+                             </graphic>
+                         </Button>
+                        <Button mnemonicParsing="false" onAction="#AddClient" prefHeight="25.0" prefWidth="25.0" textFill="WHITE">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                           <graphic>
+                              <FontAwesomeIconView fill="WHITE" glyphName="PLUS" />
+                           </graphic>
+                          
+                        </Button>
+                        <Button mnemonicParsing="false" onAction="#UpdClient" prefHeight="32.0" prefWidth="16.0" textFill="WHITE">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                           <graphic>
+                              <ImageView fitHeight="19.0" fitWidth="16.0">
+                                 <image>
+                                    <Image url="@../../assests/style/images/icons8-modifier-24.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                        <Button mnemonicParsing="false" onAction="#DelClient" prefHeight="33.0" prefWidth="48.0" textFill="WHITE">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                           <graphic>
+                              <ImageView fitHeight="26.0" fitWidth="26.0">
+                                 <image>
+                                    <Image url="@../../assests/style/images/icons8-supprimer-pour-toujours-100.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                     </children>
+                  </HBox>
+               </children>
+            </GridPane>
+         </children>
+      </VBox>
+      <Pane prefHeight="116.0" prefWidth="832.0" style="-fx-background-color: #5471d2;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+         <children>
+            <Text layoutX="389.0" layoutY="77.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Les Clients">
+               <fill>
+                  <LinearGradient endX="1.0" endY="1.0" startX="0.42857142857142855" startY="1.0">
+                     <stops>
+                        <Stop color="#5d5c5c" />
+                        <Stop color="#c7e3f2" offset="1.0" />
+                     </stops>
+                  </LinearGradient>
+               </fill>
+               <font>
+                  <Font name="System Bold" size="47.0" />
+               </font>
+            </Text>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>
